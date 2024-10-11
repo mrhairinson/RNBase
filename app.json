@@ -1,0 +1,9 @@
+{
+  "name": "easymath",
+  "displayName": "easymath",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-7428563862882353~7185966930",
+    "ios_app_id": "ca-app-pub-xxxxxxxx~xxxxxxxx",
+    "user_tracking_usage_description": "This identifier will be used to deliver personalized ads to you."
+  }
+}

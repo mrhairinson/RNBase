@@ -1,0 +1,22 @@
+{
+  "ENV target": "Meta ENV",
+  "ReduxStore State": "Estado ReduxStore",
+  "App Open Ads show when user open app from foreground": "Anúncios de abertura de aplicativo são exibidos quando o usuário abre o aplicativo em primeiro plano",
+  "Show Inter Ads": "Mostrar anúncios entre anúncios",
+  "Show Reward Ads": "Mostrar anúncios de recompensa",
+  "Click to change ads in bottom": "Clique para alterar os anúncios na parte inferior",
+  "Click to change random number": "Clique para alterar o número aleatório",
+  "Show Banner": "Mostrar faixa",
+  "Show Native Banner": "Mostrar banner nativo",
+  "Show Native Image": "Mostrar imagem nativa",
+  "Show Native Video": "Mostrar vídeo nativo",
+  "Click to change language": "Clique para alterar o idioma",
+  "English": "Inglês",
+  "Japanese": "japonês",
+  "Hindi": "hindi",
+  "Germany": "Alemanha",
+  "Portuguese": "Português",
+  "Korean": "coreano",
+  "Indonesian": "indonésio",
+  "Spanish": "Espanhol"
+}

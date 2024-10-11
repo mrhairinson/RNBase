@@ -1,0 +1,22 @@
+{
+  "ENV target": "objetivo ENV",
+  "ReduxStore State": "Estado de la tienda Redux",
+  "App Open Ads show when user open app from foreground": "Los anuncios de apertura de aplicaciones se muestran cuando el usuario abre la aplicación desde primer plano",
+  "Show Inter Ads": "Mostrar anuncios intermedios",
+  "Show Reward Ads": "Mostrar anuncios de recompensa",
+  "Click to change ads in bottom": "Haga clic para cambiar los anuncios en la parte inferior",
+  "Click to change random number": "Haga clic para cambiar el número aleatorio",
+  "Show Banner": "Mostrar banner",
+  "Show Native Banner": "Mostrar banner nativo",
+  "Show Native Image": "Mostrar imagen nativa",
+  "Show Native Video": "Mostrar vídeo nativo",
+  "Click to change language": "Haga clic para cambiar el idioma",
+  "English": "Inglés",
+  "Japanese": "japonés",
+  "Hindi": "hindi",
+  "Germany": "Alemania",
+  "Portuguese": "portugués",
+  "Korean": "coreano",
+  "Indonesian": "indonesio",
+  "Spanish": "Español"
+}

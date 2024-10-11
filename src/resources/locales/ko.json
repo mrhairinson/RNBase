@@ -1,0 +1,22 @@
+{
+  "ENV target": "환경 목표",
+  "ReduxStore State": "ReduxStore 상태",
+  "App Open Ads show when user open app from foreground": "사용자가 포그라운드에서 앱을 열 때 앱 오프닝 광고가 표시됩니다.",
+  "Show Inter Ads": "인터 광고 표시",
+  "Show Reward Ads": "보상 광고 표시",
+  "Click to change ads in bottom": "하단의 광고를 변경하려면 클릭하세요.",
+  "Click to change random number": "임의의 숫자를 변경하려면 클릭하세요.",
+  "Show Banner": "배너 표시",
+  "Show Native Banner": "네이티브 배너 표시",
+  "Show Native Image": "네이티브 이미지 표시",
+  "Show Native Video": "네이티브 비디오 표시",
+  "Click to change language": "언어를 변경하려면 클릭하세요.",
+  "English": "영어",
+  "Japanese": "일본어",
+  "Hindi": "힌디 어",
+  "Germany": "독일",
+  "Portuguese": "포르투갈 인",
+  "Korean": "한국인",
+  "Indonesian": "인도네시아 인",
+  "Spanish": "스페인 사람"
+}

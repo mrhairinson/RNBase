@@ -1,0 +1,22 @@
+{
+  "ENV target": "ENV-Ziel",
+  "ReduxStore State": "ReduxStore-Status",
+  "App Open Ads show when user open app from foreground": "App-Open-Anzeigen werden angezeigt, wenn der Benutzer die App im Vordergrund öffnet",
+  "Show Inter Ads": "Inter-Anzeigen anzeigen",
+  "Show Reward Ads": "Prämienanzeigen anzeigen",
+  "Click to change ads in bottom": "Klicken Sie unten, um die Anzeigen zu ändern",
+  "Click to change random number": "Klicken Sie, um die Zufallszahl zu ändern",
+  "Show Banner": "Banner anzeigen",
+  "Show Native Banner": "Natives Banner anzeigen",
+  "Show Native Image": "Natives Bild anzeigen",
+  "Show Native Video": "Natives Video anzeigen",
+  "Click to change language": "Klicken Sie, um die Sprache zu ändern",
+  "English": "Englisch",
+  "Japanese": "japanisch",
+  "Hindi": "Hindi",
+  "Germany": "Germany",
+  "Portuguese": "Portuguese",
+  "Korean": "Korean",
+  "Indonesian": "Indonesian",
+  "Spanish": "Spanish"
+}

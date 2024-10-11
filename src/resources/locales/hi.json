@@ -1,0 +1,22 @@
+{
+  "ENV target": "ईएनवी लक्ष्य",
+  "ReduxStore State": "रेडक्सस्टोर राज्य",
+  "App Open Ads show when user open app from foreground": "जब उपयोगकर्ता अग्रभूमि से ऐप खोलता है तो ऐप ओपन विज्ञापन दिखाई देते हैं",
+  "Show Inter Ads": "इंटर विज्ञापन दिखाएँ",
+  "Show Reward Ads": "इनाम विज्ञापन दिखाएँ",
+  "Click to change ads in bottom": "नीचे विज्ञापन बदलने के लिए क्लिक करें",
+  "Click to change random number": "यादृच्छिक संख्या बदलने के लिए क्लिक करें",
+  "Show Banner": "बैनर दिखाएँ",
+  "Show Native Banner": "मूल बैनर दिखाएँ",
+  "Show Native Image": "मूल छवि दिखाएँ",
+  "Show Native Video": "मूल वीडियो दिखाएँ",
+  "Click to change language": "भाषा बदलने के लिए क्लिक करें",
+  "English": "अंग्रेज़ी",
+  "Japanese": "जापानी",
+  "Hindi": "हिंदी",
+  "Germany": "जर्मनी",
+  "Portuguese": "पुर्तगाली",
+  "Korean": "कोरियाई",
+  "Indonesian": "इन्डोनेशियाई",
+  "Spanish": "स्पैनिश"
+}
