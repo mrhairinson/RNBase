@@ -1,10 +1,12 @@
+// import analytics from '@react-native-firebase/analytics';
 import {
   NavigationContainer as DefaultNavigationContainer,
   createNavigationContainerRef,
-} from "@react-navigation/native";
-import React, { ReactNode, memo, useRef } from "react";
+} from '@react-navigation/native';
+import React, {ReactNode, memo, useRef} from 'react';
 // import RNBootSplash from 'react-native-bootsplash';
-import { RootParamList } from "./RootNavigation";
+import {RootParamList} from './RootNavigation';
+import analytics from '@react-native-firebase/analytics';
 
 type NavigationProviderProps = {
   children: ReactNode;
@@ -28,7 +30,11 @@ const NavigationProvider = ({
       const currentRouteName = navigationRef.current?.getCurrentRoute?.()?.name;
       if (previousRouteName !== currentRouteName) {
         // Replace the line below to add the tracker from a mobile analytics SDK
-        console.log("Cur route:", currentRouteName);
+        // Replace the line below to add the tracker from a mobile analytics SDK\
+        await analytics().logScreenView({
+          screen_name: currentRouteName,
+          screen_class: currentRouteName,
+        });
       }
       routeNameRef.current = currentRouteName;
     } catch (err) {
@@ -40,8 +46,7 @@ const NavigationProvider = ({
     <DefaultNavigationContainer<RootParamList>
       ref={navigationRef}
       onReady={onReady}
-      onStateChange={onStateChange}
-    >
+      onStateChange={onStateChange}>
       {children}
     </DefaultNavigationContainer>
   );
