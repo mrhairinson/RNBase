@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-easymath-easymathTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-easymath-easymathTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B8147AB52CB93AA8003AD969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8147AB42CB93AA8003AD969 /* GoogleService-Info.plist */; };
+		B8147AB82CB93BFE003AD969 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B8147AB72CB93BFE003AD969 /* FirebaseAnalytics */; };
+		B8147ABA2CB93BFE003AD969 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = B8147AB92CB93BFE003AD969 /* FirebaseCrashlytics */; };
+		B8147ABC2CB93BFE003AD969 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = B8147ABB2CB93BFE003AD969 /* FirebaseRemoteConfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-easymath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-easymath.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = easymath/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-easymath-easymathTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easymath-easymathTests.release.xcconfig"; path = "Target Support Files/Pods-easymath-easymathTests/Pods-easymath-easymathTests.release.xcconfig"; sourceTree = "<group>"; };
+		B8147AB42CB93AA8003AD969 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -60,7 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8147ABA2CB93BFE003AD969 /* FirebaseCrashlytics in Frameworks */,
+				B8147AB82CB93BFE003AD969 /* FirebaseAnalytics in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-easymath.a in Frameworks */,
+				B8147ABC2CB93BFE003AD969 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,7 @@
 		13B07FAE1A68108700A75B9A /* easymath */ = {
 			isa = PBXGroup;
 			children = (
+				B8147AB42CB93AA8003AD969 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -191,6 +200,11 @@
 			dependencies = (
 			);
 			name = easymath;
+			packageProductDependencies = (
+				B8147AB72CB93BFE003AD969 /* FirebaseAnalytics */,
+				B8147AB92CB93BFE003AD969 /* FirebaseCrashlytics */,
+				B8147ABB2CB93BFE003AD969 /* FirebaseRemoteConfig */,
+			);
 			productName = easymath;
 			productReference = 13B07F961A680F5B00A75B9A /* easymath.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				B8147AB62CB93BFE003AD969 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -245,6 +262,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B8147AB52CB93AA8003AD969 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +701,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8147AB62CB93BFE003AD969 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B8147AB72CB93BFE003AD969 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8147AB62CB93BFE003AD969 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		B8147AB92CB93BFE003AD969 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8147AB62CB93BFE003AD969 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		B8147ABB2CB93BFE003AD969 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8147AB62CB93BFE003AD969 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }

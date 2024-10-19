@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: 'com.google.gms.google-services' 
+apply plugin: 'com.google.firebase.crashlytics'
 // Multi-environment
 project.ext.envConfigFiles = [
     development: ".env.development",
@@ -69,6 +70,14 @@ react {
 def enableProguardInReleaseBuilds = false
 
 /**
+ * Set this to true to create four separate APKs instead of one,
+ * one for each native architecture. This is useful if you don't
+ * use App Bundles (https://developer.android.com/guide/app-bundle/)
+ * and want to have separate APKs to upload to the Play Store.
+ */
+def enableSeparateBuildPerCPUArchitecture = false
+
+/**
  * The preferred build flavor of JavaScriptCore (JSC)
  *
  * For example, to use the international variant, you can use:
@@ -80,6 +89,16 @@ def enableProguardInReleaseBuilds = false
  * this variant is about 6MiB larger per architecture than default.
  */
 def jscFlavor = 'org.webkit:android-jsc:+'
+
+/**
+ * Private function to get the list of Native Architectures you want to build.
+ * This reads the value from reactNativeArchitectures in your gradle.properties
+ * file and works together with the --active-arch-only flag of react-native run-android.
+ */
+def reactNativeArchitectures() {
+    def value = project.getProperties().get("reactNativeArchitectures")
+    return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
+}
 
 android {
     ndkVersion rootProject.ext.ndkVersion
@@ -94,6 +113,17 @@ android {
         versionCode 1
         versionName "1.0"
         resValue 'string', 'build_config_package','com.rnbase'
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64" // Exclude riscv64
+        }
+    }
+    splits {
+        abi {
+            reset()
+            enable enableSeparateBuildPerCPUArchitecture
+            universalApk false  // If true, also generate a universal APK
+            include (*reactNativeArchitectures())
+        }
     }
     flavorDimensions 'env'
     productFlavors {

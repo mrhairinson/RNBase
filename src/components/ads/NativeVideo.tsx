@@ -21,7 +21,7 @@ const NativeVideo = React.memo(({adId}: {adId?: string}): JSX.Element => {
 
   AdManager.registerRepository({
     adUnitId: adMediaId,
-    numOfAds: 3,
+    numOfAds: 1,
     expirationPeriod: 4000,
     mediationEnabled: true,
   }).then(result => {

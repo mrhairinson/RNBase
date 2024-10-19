@@ -9,8 +9,10 @@ import NativeAdView, {
   TestIds,
 } from 'react-native-admob-native-ads';
 import ShimmerPlaceholder from '../loading/ShimmerPlaceholder';
+import { useAppTheme } from '~/resources/theme';
 
 const NativeBanner = React.memo(({adId}: {adId?: string}): JSX.Element => {
+  const theme = useAppTheme();
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
@@ -19,7 +21,7 @@ const NativeBanner = React.memo(({adId}: {adId?: string}): JSX.Element => {
 
   AdManager.registerRepository({
     adUnitId: adBannerImageId,
-    numOfAds: 3,
+    numOfAds: 1,
     expirationPeriod: 4000,
     mediationEnabled: true,
   }).then(result => {
@@ -88,7 +90,7 @@ const NativeBanner = React.memo(({adId}: {adId?: string}): JSX.Element => {
       <View
         style={{
           width: '100%',
-          paddingVertical: 12,
+          paddingVertical: 5,
           paddingHorizontal: 15,
           backgroundColor: '#f8f8f8',
           borderWidth: 1,
@@ -151,7 +153,7 @@ const NativeBanner = React.memo(({adId}: {adId?: string}): JSX.Element => {
               }}>
               <View
                 style={{
-                  backgroundColor: '#32A05F',
+                  backgroundColor: theme.colors.primary,
                   alignSelf: 'flex-start',
                   marginRight: 8,
                   marginTop: 4,
@@ -189,13 +191,13 @@ const NativeBanner = React.memo(({adId}: {adId?: string}): JSX.Element => {
               },
               Platform.OS === 'ios'
                 ? {
-                    backgroundColor: '#32A05F',
+                    backgroundColor: theme.colors.primary,
                     borderRadius: 20,
                   }
                 : {},
             ]}
             buttonAndroidStyle={{
-              backgroundColor: '#32A05F',
+              backgroundColor: theme.colors.primary,
               borderRadius: 10,
             }}
             allCaps
